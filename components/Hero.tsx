@@ -185,11 +185,29 @@ export default function Hero() {
                             <motion.h2 variants={textRevealDiff} className="text-2xl font-bold text-white sm:text-3xl">
                                 AI Developer & Engineer
                             </motion.h2>
-                            <motion.p variants={textRevealDiff} className="text-xl md:text-2xl font-medium tracking-tight">
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white to-indigo-300">
-                                    AI Applications, Systems & Agents
-                                </span>
-                            </motion.p>
+                            <motion.div
+                                variants={textRevealDiff}
+                                className="flex flex-wrap items-center gap-x-4 text-base md:text-lg font-medium tracking-wide text-slate-400"
+                            >
+                                <div className="flex items-center gap-2">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                        AI Applications
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                        Systems
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                        Agents
+                                    </span>
+                                </div>
+                            </motion.div>
                         </div>
 
 
