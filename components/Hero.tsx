@@ -199,9 +199,9 @@ export default function Hero() {
                                 >
                                     <motion.span
                                         className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
-                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", boxShadow: "0 0 12px rgba(99,102,241,1)" }}
                                     />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:boxShadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         AI Applications
                                     </span>
                                 </motion.div>
@@ -212,9 +212,9 @@ export default function Hero() {
                                 >
                                     <motion.span
                                         className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
-                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", boxShadow: "0 0 12px rgba(99,102,241,1)" }}
                                     />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:boxShadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         Systems
                                     </span>
                                 </motion.div>
@@ -225,9 +225,9 @@ export default function Hero() {
                                 >
                                     <motion.span
                                         className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
-                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", boxShadow: "0 0 12px rgba(99,102,241,1)" }}
                                     />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:boxShadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         Agents
                                     </span>
                                 </motion.div>
