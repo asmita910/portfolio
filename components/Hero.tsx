@@ -190,26 +190,47 @@ export default function Hero() {
                                 className="flex flex-wrap items-center gap-x-4 text-base md:text-lg font-medium tracking-wide text-slate-400"
                             >
                                 <div className="flex items-center gap-2">
-                                    <span className="text-slate-400 font-medium">I Build</span>
+                                    <span className="text-slate-400 font-medium select-none">I Build</span>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                <motion.div
+                                    className="flex items-center gap-2 cursor-pointer group/point"
+                                    whileHover={{ scale: 1.05, x: 2 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                    <motion.span
+                                        className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                    />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         AI Applications
                                     </span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                </motion.div>
+                                <motion.div
+                                    className="flex items-center gap-2 cursor-pointer group/point"
+                                    whileHover={{ scale: 1.05, x: 2 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                    <motion.span
+                                        className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                    />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         Systems
                                     </span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
+                                </motion.div>
+                                <motion.div
+                                    className="flex items-center gap-2 cursor-pointer group/point"
+                                    whileHover={{ scale: 1.05, x: 2 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                    <motion.span
+                                        className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]"
+                                        whileHover={{ scale: 1.5, backgroundColor: "#818cf8", shadow: "0 0 12px rgba(99,102,241,1)" }}
+                                    />
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased transition-all duration-300 group-hover/point:text-white group-hover/point:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
                                         Agents
                                     </span>
-                                </div>
+                                </motion.div>
                             </motion.div>
                         </div>
 
