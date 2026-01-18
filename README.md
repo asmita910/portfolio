@@ -1,3 +1,14 @@
+# Portfolio: Memorix (Asmita Saran)
+
+> [!WARNING]
+> **COPYRIGHT PROTECTED**: This design and code are protected under the **CC BY-NC-ND 4.0** license.
+> You may **NOT** use this for commercial purposes.
+> You may **NOT** distribute modified versions.
+> © 2026 Asmita Saran. All Rights Reserved.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![Status](https://img.shields.io/badge/Status-Protected-red)](https://github.com/asmita910)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
