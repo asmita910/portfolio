@@ -68,9 +68,20 @@ export default function Hero() {
 
             <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
 
+
                 {/* LEFT COLUMN: Interactive Feature Reveal */}
                 <div className="flex flex-col justify-center order-2 lg:order-1 relative min-h-[400px]">
                     <div className="relative z-10 space-y-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="mb-4"
+                        >
+                            <span className="text-sm font-bold uppercase tracking-[0.2em] text-indigo-400 opacity-80">
+                                Building Intelligent Solutions with —
+                            </span>
+                        </motion.div>
                         {(Object.entries(features) as [keyof typeof features, typeof features.llm][]).map(([key, feature]) => (
                             <div
                                 key={key}
@@ -174,8 +185,10 @@ export default function Hero() {
                             <motion.h2 variants={textRevealDiff} className="text-2xl font-bold text-white sm:text-3xl">
                                 AI Developer & Engineer
                             </motion.h2>
-                            <motion.p variants={textRevealDiff} className="text-xl text-indigo-300 font-medium">
-                                I Build AI Applications, Systems & Agents
+                            <motion.p variants={textRevealDiff} className="text-xl md:text-2xl font-medium tracking-tight">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white to-indigo-300">
+                                    AI Applications, Systems & Agents
+                                </span>
                             </motion.p>
                         </div>
 
