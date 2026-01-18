@@ -190,6 +190,9 @@ export default function Hero() {
                                 className="flex flex-wrap items-center gap-x-4 text-base md:text-lg font-medium tracking-wide text-slate-400"
                             >
                                 <div className="flex items-center gap-2">
+                                    <span className="text-slate-400 font-medium">I Build</span>
+                                </div>
+                                <div className="flex items-center gap-2">
                                     <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
                                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 font-semibold antialiased">
                                         AI Applications
