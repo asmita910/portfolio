@@ -317,36 +317,10 @@ export default function Hero() {
                                 <motion.p
                                     className="text-slate-300 text-lg leading-relaxed flex flex-wrap gap-x-1.5"
                                     variants={{
-                                        animate: { transition: { staggerChildren: 0.01, delayChildren: 0.4 } }
+                                        animate: { transition: { staggerChildren: 0.008, delayChildren: 0.4 } }
                                     }}
                                 >
-                                    {"Skilled in prompt optimization, model evaluation, API integration, real-time inference, and scalable deployment of AI systems.".split(" ").map((word, i) => (
-                                        <motion.span
-                                            key={i}
-                                            variants={{
-                                                initial: { y: 12, opacity: 0, filter: "blur(8px)" },
-                                                animate: { y: 0, opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } }
-                                            }}
-                                            whileHover={{ y: -2, color: "#fff", transition: { duration: 0.2 } }}
-                                            className="hover:text-indigo-200 transition-colors"
-                                        >
-                                            {word}
-                                        </motion.span>
-                                    ))}
-                                </motion.p>
-                            </motion.div>
-
-                            <motion.div
-                                className="relative rounded-2xl border border-white/0 p-4 transition-all duration-500 hover:border-white/10 hover:bg-white/5 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)]"
-                                whileHover={{ scale: 1.01 }}
-                            >
-                                <motion.p
-                                    className="text-slate-300 text-lg leading-relaxed flex flex-wrap gap-x-1.5"
-                                    variants={{
-                                        animate: { transition: { staggerChildren: 0.008, delayChildren: 0.8 } }
-                                    }}
-                                >
-                                    {"Experienced in architecting end-to-end AI pipelines—from data ingestion through reasoning, post-processing, and production rollout—while ensuring reliability, interpretability, and maintainability.".split(" ").map((word, i) => (
+                                    {"Skilled in prompt optimization, model evaluation, API integration, real-time inference, and scalable deployment of AI systems. I architect end-to-end AI pipelines—from data ingestion through reasoning, post-processing, and production rollout—while ensuring reliability, interpretability, and maintainability.".split(" ").map((word, i) => (
                                         <motion.span
                                             key={i}
                                             variants={{
