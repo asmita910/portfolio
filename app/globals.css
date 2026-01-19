@@ -46,6 +46,14 @@
   box-shadow: var(--shadow-2xl);
 }
 
+@utility mask-fade-vertical {
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

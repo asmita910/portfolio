@@ -14,10 +14,35 @@ const features = {
         image: "/images/llm_3d_icon_1768752679122.png",
         color: "from-purple-500 to-indigo-500",
     },
-    automation: {
-        title: "Automation",
-        image: "/images/automation_3d_icon_1768752694721.png",
+    genai: {
+        title: "Gen-AI",
+        image: "/images/genai_3d_icon.png",
         color: "from-blue-500 to-cyan-500",
+    },
+    rag: {
+        title: "RAG",
+        image: "/images/rag_3d_icon.png",
+        color: "from-cyan-400 to-blue-600",
+    },
+    langchain: {
+        title: "LangChain",
+        image: "/images/workflow_3d_icon_1768752713512.png",
+        color: "from-orange-400 to-red-500",
+    },
+    langgraph: {
+        title: "LangGraph",
+        image: "/images/neural_background_1768752727939.png",
+        color: "from-emerald-400 to-green-600",
+    },
+    cicd: {
+        title: "CI/CD",
+        image: "/images/automation_3d_icon_1768752694721.png",
+        color: "from-slate-400 to-slate-600",
+    },
+    orchestration: {
+        title: "AI Orchestration",
+        image: "/images/workflow_3d_icon_1768752713512.png",
+        color: "from-violet-500 to-fuchsia-500",
     },
     workflow: {
         title: "Intelligent Workflows",
@@ -48,6 +73,7 @@ const container = {
 
 export default function Hero() {
     const [hoveredFeature, setHoveredFeature] = useState<keyof typeof features | null>(null);
+    const featureKeys = Object.keys(features) as (keyof typeof features)[];
 
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden px-6 lg:px-8">
@@ -71,77 +97,98 @@ export default function Hero() {
 
                 {/* LEFT COLUMN: Interactive Feature Reveal */}
                 <div className="flex flex-col justify-center order-2 lg:order-1 relative min-h-[400px]">
-                    <div className="relative z-10 space-y-8">
+                    <div className="relative z-10 space-y-4">
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="mb-4"
+                            className="mb-8"
                         >
                             <span className="text-sm font-bold uppercase tracking-[0.2em] text-indigo-400 opacity-80">
                                 Building Intelligent Solutions with —
                             </span>
                         </motion.div>
-                        {(Object.entries(features) as [keyof typeof features, typeof features.llm][]).map(([key, feature]) => (
-                            <div
-                                key={key}
-                                className="relative group cursor-pointer w-fit"
-                                onMouseEnter={() => setHoveredFeature(key)}
-                                onMouseLeave={() => setHoveredFeature(null)}
-                            >
-                                <motion.h2
-                                    className={cn(
-                                        "text-4xl md:text-5xl font-bold transition-colors duration-300",
-                                        hoveredFeature === key ? "text-transparent bg-clip-text bg-gradient-to-r " + feature.color : "text-slate-500 hover:text-slate-300"
-                                    )}
-                                >
-                                    {feature.title}
-                                </motion.h2>
 
-                                <AnimatePresence>
-                                    {hoveredFeature === key && (
-                                        <motion.div
-                                            initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                                            animate={{ opacity: 1, x: 50, scale: 1 }}
-                                            exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="absolute left-full top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-20 hidden md:block"
+                        {/* Scrolling Container */}
+                        <div className="relative h-[320px] overflow-hidden mask-fade-vertical">
+                            <motion.div
+                                animate={{
+                                    y: [0, -featureKeys.length * 80],
+                                }}
+                                transition={{
+                                    duration: 20,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                                className="flex flex-col gap-4"
+                            >
+                                {[...featureKeys, ...featureKeys].map((key, index) => {
+                                    const feature = features[key];
+                                    return (
+                                        <div
+                                            key={`${key}-${index}`}
+                                            className="relative group cursor-pointer h-16 flex items-center"
+                                            onMouseEnter={() => setHoveredFeature(key)}
+                                            onMouseLeave={() => setHoveredFeature(null)}
                                         >
-                                            <div className="relative w-full h-full glass-card rounded-2xl p-2">
-                                                <div className={`absolute inset-0 opacity-20 bg-gradient-to-br ${feature.color}`}></div>
-                                                <Image
-                                                    src={feature.image}
-                                                    alt={feature.title}
-                                                    fill
-                                                    className="object-contain drop-shadow-2xl"
-                                                />
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                                            <motion.h2
+                                                className={cn(
+                                                    "text-3xl md:text-4xl font-bold transition-all duration-300",
+                                                    hoveredFeature === key
+                                                        ? "text-transparent bg-clip-text bg-gradient-to-r " + feature.color + " scale-105 origin-left"
+                                                        : "text-slate-500 hover:text-slate-300"
+                                                )}
+                                            >
+                                                {feature.title}
+                                            </motion.h2>
+
+                                            <AnimatePresence>
+                                                {hoveredFeature === key && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, x: 20, scale: 0.8, rotateY: -20 }}
+                                                        animate={{ opacity: 1, x: 50, scale: 1, rotateY: 0 }}
+                                                        exit={{ opacity: 0, x: 20, scale: 0.8, rotateY: -20 }}
+                                                        transition={{ duration: 0.4, type: "spring", stiffness: 200, damping: 20 }}
+                                                        className="absolute left-full top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-20 hidden md:block"
+                                                    >
+                                                        <div className="relative w-full h-full glass-card rounded-3xl p-4 shadow-[0_0_50px_rgba(99,102,241,0.2)]">
+                                                            <div className={`absolute inset-0 opacity-10 bg-gradient-to-br ${feature.color} rounded-3xl`}></div>
+                                                            <Image
+                                                                src={feature.image}
+                                                                alt={feature.title}
+                                                                fill
+                                                                className="object-contain p-4 drop-shadow-[0_20_35px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-110"
+                                                            />
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    );
+                                })}
+                            </motion.div>
+                        </div>
                     </div>
 
-                    {/* Mobile Fallback Image Display (since hover doesn't work well on touch) */}
-                    <div className="md:hidden mt-8 h-48 w-full relative block">
+                    {/* Mobile Fallback Image Display */}
+                    <div className="md:hidden mt-12 h-48 w-full relative block">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={hoveredFeature || "default"}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="absolute inset-0 flex items-center justify-center p-4"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                className="absolute inset-0 flex items-center justify-center p-4 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10"
                             >
                                 {hoveredFeature ? (
                                     <Image
                                         src={features[hoveredFeature].image}
                                         alt="Feature"
                                         fill
-                                        className="object-contain"
+                                        className="object-contain p-4"
                                     />
                                 ) : (
-                                    <div className="text-slate-600 text-sm">Tap topics above to explore</div>
+                                    <div className="text-slate-400 text-sm font-medium">Explore AI Technologies</div>
                                 )}
                             </motion.div>
                         </AnimatePresence>
