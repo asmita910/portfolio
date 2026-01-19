@@ -273,7 +273,7 @@ export default function Hero() {
                                         animate: { transition: { staggerChildren: 0.01, delayChildren: 0.6 } }
                                     }}
                                 >
-                                    {"I build AI-powered products by designing clarity-first AI systems—where strong architecture, well-defined inputs and outputs, and product thinking come together to solve real problems.".split(" ").map((word, i) => (
+                                    {"With a background in Computer Science & Engineering, I build AI-powered products by designing clarity-first systems. I believe that strong architecture, precise inputs, and product thinking are the keys to solving real-world problems through intelligence.".split(" ").map((word, i) => (
                                         <motion.span
                                             key={i}
                                             variants={{
