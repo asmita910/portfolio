@@ -17,6 +17,7 @@ export const projects: Project[] = [
         tags: ["Java", "Kotlin", "Android SDK", "TensorFlow Lite"],
         icon: Smartphone,
         image: "/images/emotion-recognition.jpg", // Placeholder
+        link: "/docs/README_EmotionRecognition.md"
     },
     {
         title: "Memorix",

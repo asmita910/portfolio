@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { projects } from "@/lib/data";
 
 const container = {
@@ -60,7 +59,7 @@ export default function Projects() {
                             <motion.article
                                 key={project.title}
                                 variants={item}
-                                className="glass-card flex flex-col items-start justify-between rounded-2xl p-6 transition-transform hover:scale-[1.02]"
+                                className="glass-card group relative flex flex-col items-start justify-between rounded-2xl p-6 transition-all hover:scale-[1.02] hover:bg-slate-800/50"
                             >
                                 <div className="relative w-full">
                                     <div className="aspect-[16/9] w-full rounded-xl bg-slate-800 overflow-hidden relative group">
@@ -96,7 +95,7 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <div className="group relative">
+                                <div className="">
                                     <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-indigo-400">
                                         <a href={project.link || "#"} target="_blank" rel="noopener noreferrer">
                                             <span className="absolute inset-0" />
@@ -110,9 +109,14 @@ export default function Projects() {
 
                                 <div className="relative mt-8 flex w-full items-center gap-x-4">
                                     {project.link && (
-                                        <Link href={project.link} target="_blank" className="z-10 inline-flex items-center text-sm font-medium text-indigo-400 hover:text-indigo-300">
+                                        <a 
+                                            href={project.link} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="z-20 inline-flex items-center text-sm font-medium text-indigo-400 hover:text-indigo-300"
+                                        >
                                             View Details <ExternalLink className="ml-1 h-3 w-3" />
-                                        </Link>
+                                        </a>
                                     )}
                                     {!project.link && (
                                         <span className="text-sm text-slate-600 italic">Internal / Private Project</span>
