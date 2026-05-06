@@ -1,5 +1,5 @@
 
-import { Brain, Smartphone, Workflow, Layers, LucideIcon } from 'lucide-react';
+import { Brain, Smartphone, Workflow, Layers, MessageSquare, LucideIcon } from 'lucide-react';
 
 export interface Project {
     title: string;
@@ -24,7 +24,8 @@ export const projects: Project[] = [
         description: "A Python-based AI agent capable of answering questions and processing documents using RAG.",
         tags: ["Python", "LangChain", "OpenAI", "RAG"],
         icon: Brain,
-        image: "/images/pyq-agent.jpg", // Placeholder
+        image: "/images/memorix-ui.png",
+        link: "/images/memorix-workflow.png",
     },
     {
         title: "Opal Learning App",
@@ -40,5 +41,13 @@ export const projects: Project[] = [
         tags: ["n8n", "ElevenLabs", "Automation", "AI Agents"],
         icon: Workflow,
         image: "/images/workflow.jpg", // Placeholder
+    },
+    {
+        title: "Chatbot",
+        description: "An intelligent conversational AI chatbot that captures leads and answers queries in real-time using natural language processing.",
+        tags: ["Python", "AI", "NLP", "Chatbot"],
+        icon: MessageSquare,
+        image: "/images/chatbot.png",
+        link: "https://wide-ghosts-clean.loca.lt",
     }
 ];
