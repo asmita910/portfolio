@@ -48,6 +48,6 @@ export const projects: Project[] = [
         tags: ["Python", "AI", "NLP", "Chatbot"],
         icon: MessageSquare,
         image: "/images/chatbot.png",
-        link: "https://wide-ghosts-clean.loca.lt",
+        link: "https://squarebits-assistant.onrender.com",
     }
 ];
